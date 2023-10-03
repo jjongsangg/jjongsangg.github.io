@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>HTML5 개인 포트폴리오 홈페이지</title>
+	<link rel="stylesheet" href="mportpolio.css"/>
+</head>
+<body>
+	<header>
+		<iframe style="border:none" width="100%" height="70px" src="./header.html"></iframe>
+	</header>
+	<nav>
+		<span><a href="mcareer.html"> 경력 </a></span>
+		<span><a href="mstudy.html"> 학술 </a></span>
+		<span><a href="minfo.html"> 인적 </a></span>
+		<span><a href="mintro.html"> 소개 </a></span>
+	</nav>
+  <div class="content boxDeco">
+	<section class="section1">  
+		<h3>인적사항</h3>
+		<ul>
+			<li class="boxDeco">성    명 : 홍길동</li>
+			<li class="boxDeco">생년월일 : 1989. 12. 25</li>
+			<li class="boxDeco">주    소 : 서울시 종로구 창신동 123</li>
+			<li class="boxDeco">연 락 처 : 010-123-4567</li>
+			<li class="boxDeco">학    력
+			<table id="year-table">
+				<thead>
+					<tr>	<th>졸업년도</th> <th>출신학교</th></tr>
+				</thead>
+				<tbody>
+					<tr>	<td>2003. 2</td><td> 하늘초등학교 졸업</td>	</tr>
+					<tr>	<td>2006. 2.</td><td> 미래중학교 졸업</td>	</tr>
+					<tr>	<td>2009. 2.</td><td> 미래고등학교 졸업</td></tr>
+					<tr>	<td>2014. 2.</td><td> 한국대학교 컴퓨터학과 졸업</td></tr>
+				</tbody>
+			</table>
+			</li>
+		</ul>
+	</section>
+	<img id="logo" src="bsks.svg" width="500px"/>	
+	<aside>
+		<div class="boxDeco" style="margin-top: 30px;">
+		<h3>참조링크</h3>
+		<a href="http://jjongsangg.github.io">
+			<img class="portal" src="git.png" alt="깃허브 이동"/>
+		</a>
+		<a href="http://www.instagram.com">
+			<img class="portal" src="insta.svg" alt="인스타그램 이동"/>
+		</a>
+		<a href="http://www.velog.net">
+			<img class="portal" src="velog.png" alt="벨로그 이동"/>
+		</a>
+		</div>
+	</aside>
+  </div>
+  <footer>
+	<iframe style="border:none;position: absolute;left: 0px;bottom: 0px;" width="100%" height="20px" src="./footer.html"></iframe>
+</footer>
+</body>
+</html>
