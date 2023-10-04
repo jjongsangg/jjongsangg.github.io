@@ -1,0 +1,88 @@
+.emphasis {
+    padding: 7px;
+    padding-right: 15px;
+    color: #ffffff;
+    background-color: #0764c7;
+}
+.TitleText {
+
+    display: flex;
+
+    justify-content: left;
+
+    align-items: center;
+
+    height: 100%;
+
+    font-family: 'Roboto', Arial, sans-serif;
+
+    font-size: 72px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.05em;
+
+    color: #ffffff;
+
+}
+.fadeUnit1 {
+    opacity: 0;
+
+    animation: fadeInText 3s ease-out forwards;
+}
+.fadeUnit2 {
+    opacity: 0;
+
+    animation: fadeInText 3s 1s ease-out forwards;
+}
+.fadeUnit3 {
+    opacity: 0;
+
+    animation: fadeInText 3s 2s ease-out forwards;
+}
+.fadeUnit4 {
+    opacity: 0;
+
+    animation: fadeInText 3s 3s ease-out forwards;
+}
+.fadeUnit5 {
+    opacity: 0;
+
+    animation: fadeInText 3s 4s ease-out forwards;
+}
+@keyframes fadeInText {
+    100% {
+
+        opacity: 1;
+    }
+}
+#MainProducts td{
+    vertical-align: middle;
+    padding-bottom: 15px;
+    width: 300px;
+    height: 200px;
+}
+#MainProducts img {
+    margin-top: 25px;
+    border-radius: 50%;
+    width: 150px;
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.301);
+}
+#MainProducts img:hover {
+    margin-top: 0px;
+    border-radius: 50%;
+    width: 150px;
+    box-shadow: 3px 38px 8px 1px rgba(0, 0, 0, 0.301);
+}
+.imgCont{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-right: 15px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 5px 5px #00132728;
+}
