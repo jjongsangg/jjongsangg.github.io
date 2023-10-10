@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="mportpolio.css"/>
+</head>
+<body>
+	<div data-role="page" id="page1" data-title=”소개”>
+		<div data-role="header" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none" width="100%" height="70px" src="./header.html"></iframe>
+		</div>
+		<div data-role="content">
+            <nav>
+                <span><a href="#page4" data-transition="slidedown"> 경력 </a></span>
+                <span><a href="#page3" data-transition="flip"> 학술 </a></span>
+                <span><a href="#page2" data-direction="slidedown"> 인적 </a></span>
+                <span><a href="#page1"data-transition="slideup"> 소개 </a></span>
+            </nav>
+          <div class="content">
+            <nav class="section1">
+                    <div class="boxDeco" style="display: flex;">
+                        <img id="stu-pic" src="profile.jpg"/>
+                        <div style="display: block;">
+                            <p><b>이름 : 김종상</b></p>
+                            <p><b>나이 : 만 <script>document.write( ((new Date()).getFullYear()) - 2000)</script></b></p>
+                            <p><b>거주지 : 부산시 연제구</b></p>
+                        </div>
+                    </div>
+                <div class="boxDeco">
+                    <h3>참조링크</h3>
+                </div>
+                <div class="boxDeco">
+                <a href="http://jjongsangg.github.io">
+                    <img class="portal" src="git.png" alt="깃허브 이동"/>
+                </a>
+                <a href="http://www.instagram.com">
+                    <img class="portal" src="insta.svg" alt="인스타그램 이동"/>
+                </a>
+                <a href="http://www.velog.net">
+                    <img class="portal" src="velog.png" alt="벨로그 이동"/>
+                </a>
+                </div>
+                <div class="boxDeco">
+                    <h3>자기소개</h3>
+                </div>
+                <div class="boxDeco">
+                <p>
+                    저는 부산경상대학교 컴퓨터정보융합과를 졸업하고 프론트엔드와 백엔드, 응용프로그램 및 모바일 등 모든분야에서 두각을 나타내고 싶은 신입 개발자 김종상입니다. 평소 프로그래밍을 즐겨하여, 어려서부터 툴을 이용한 게임제작을 시작으로 컴퓨터정보융합과에 들어와 PHP, JS, C#, Java, Dart 등의 언어를 공부하였고, 학습과 더불어 개인 프로젝트들을 진행하며 실력을 향상시키기 위하여 노력했습니다.
+                </p>
+                </div>
+            </nav>
+          </div>	
+		</div>
+		<div data-role="footer" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none;position: absolute;left: 0px;bottom: 0px;" width="100%" height="20px" src="./footer.html"></iframe>
+		</div>
+	</div>
+    <div data-role="page" id="page2" data-title=”인적”>
+		<div data-role="header" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none" width="100%" height="70px" src="./header.html"></iframe>
+		</div>
+		<div data-role="content">
+            <nav>
+                <span><a href="#page4" data-transition="pop"> 경력 </a></span>
+                <span><a href="#page3" data-transition="fade"> 학술 </a></span>
+                <span><a href="#page2" data-direction="slideup"> 인적 </a></span>
+                <span><a href="#page1"data-transition="slide"> 소개 </a></span>
+            </nav>
+          <div class="content boxDeco">
+            <section class="section1">  
+                <h3>인적사항</h3>
+                <ul>
+                    <li class="boxDeco">성    명 : 홍길동</li>
+                    <li class="boxDeco">생년월일 : 1989. 12. 25</li>
+                    <li class="boxDeco">주    소 : 서울시 종로구 창신동 123</li>
+                    <li class="boxDeco">연 락 처 : 010-123-4567</li>
+                    <li class="boxDeco">학    력
+                    <table id="year-table">
+                        <thead>
+                            <tr>	<th>졸업년도</th> <th>출신학교</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>	<td>2003. 2</td><td> 하늘초등학교 졸업</td>	</tr>
+                            <tr>	<td>2006. 2.</td><td> 미래중학교 졸업</td>	</tr>
+                            <tr>	<td>2009. 2.</td><td> 미래고등학교 졸업</td></tr>
+                            <tr>	<td>2014. 2.</td><td> 한국대학교 컴퓨터학과 졸업</td></tr>
+                        </tbody>
+                    </table>
+                    </li>
+                </ul>
+            </section>
+            <img id="logo" src="bsks.svg" width="500px"/>	
+            <aside>
+                <div class="boxDeco" style="margin-top: 30px;">
+                <h3>참조링크</h3>
+                <a href="http://jjongsangg.github.io">
+                    <img class="portal" src="git.png" alt="깃허브 이동"/>
+                </a>
+                <a href="http://www.instagram.com">
+                    <img class="portal" src="insta.svg" alt="인스타그램 이동"/>
+                </a>
+                <a href="http://www.velog.net">
+                    <img class="portal" src="velog.png" alt="벨로그 이동"/>
+                </a>
+                </div>
+            </aside>
+          </div>
+		</div>
+		<div data-role="footer" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none;position: absolute;left: 0px;bottom: 0px;" width="100%" height="20px" src="./footer.html"></iframe>
+		</div>
+	</div>
+    <div data-role="page" id="page3" data-title=”학술”>
+		<div data-role="header" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none" width="100%" height="70px" src="./header.html"></iframe>
+		</div>
+		<div data-role="content">
+            <nav>
+                <span><a href="#page4" data-transition="flip"> 경력 </a></span>
+                <span><a href="#page3" data-transition="reverse"> 학술 </a></span>
+                <span><a href="#page2" data-direction="slideup"> 인적 </a></span>
+                <span><a href="#page1"data-transition="slidedown"> 소개 </a></span>
+            </nav>
+            <div class="content">
+                <section class="section1">  
+                    <div class="boxDeco">
+                    <h3>프로젝트</h3>	
+                    <div class="boxDeco">
+                    <ul>
+                        <li>레고 NXT 실습</li>
+                    </ul>
+                    <video controls preload="metadata">
+                        <source src="video.ogv" type="video/ogv"></source>
+                        <source src="video.mp4" type="video/mp4"></source>
+                        <source src="video.webm" type="video/webm"></source>
+                        브라우저에서 비디오 파일을 지원하지 않습니다. <br/>
+                    </video>
+                    </div>
+                    </div>
+                    <div class="boxDeco">
+                    <h3>자격증</h3>
+                    <ul>
+                        <div class="boxDeco">
+                        <li>정보처리기사1급</li>
+                        </div>
+                        <div class="boxDeco">
+                        <li>DAP 자격증</li>
+                        </div>		
+                    </ul>
+                    </div>
+                    <div class="boxDeco">
+                    <h3>수상</h3>
+                    <ul>
+                        <div class="boxDeco">
+                        <li>교내 소프트웨어공모전 금상</li>
+                        </div>
+                        <div class="boxDeco">
+                        <li>포트폴리오 경진대회 장려상</li>
+                        </div>
+                    </ul>
+                    </div>
+                </section>
+                <aside>
+                    <div class="boxDeco" style="margin-top: 5px;margin-bottom: 30px;">
+                    <h3>참조링크</h3>
+                    <a href="http://jjongsangg.github.io">
+                        <img class="portal" src="git.png" alt="깃허브 이동"/>
+                    </a>
+                    <a href="http://www.instagram.com">
+                        <img class="portal" src="insta.svg" alt="인스타그램 이동"/>
+                    </a>
+                    <a href="http://www.velog.net">
+                        <img class="portal" src="velog.png" alt="벨로그 이동"/>
+                    </a>
+                    </div>
+                </aside>
+              </div>
+		</div>
+		<div data-role="footer" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none;position: absolute;left: 0px;bottom: 0px;" width="100%" height="20px" src="./footer.html"></iframe>
+		</div>
+	</div>
+    <div data-role="page" id="page4" data-title=”학술”>
+		<div data-role="header" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none" width="100%" height="70px" src="./header.html"></iframe>
+		</div>
+		<div data-role="content">
+            <nav>
+                <span><a href="#page4" data-transition="slide"> 경력 </a></span>
+                <span><a href="#page3" data-transition="slideup"> 학술 </a></span>
+                <span><a href="#page2" data-direction="reverse"> 인적 </a></span>
+                <span><a href="#page1"data-transition="slidedown"> 소개 </a></span>
+            </nav>
+            <section class="section1 boxDeco" style="margin-top: 60px;">
+                <h3>세미나(연수)</h3>
+                <ul>
+                    <div class="boxDeco">
+                    <li>2012. 4 빅 데이터 응용 세미나 참석</li>
+                    </div>
+                    <div class="boxDeco">
+                    <li>2013. 3~6 IT 멘토링 사업 참여</li>
+                    </div>
+                </ul>
+                <div id="pic-container" class="boxDeco">
+                    <img id="pic1" class="semi-pic" src="seminar1.jpg"/>
+                    <img id="pic2" class="semi-pic" src="seminar2.jpg"/>
+                    <img id="pic3" class="semi-pic" src="seminar3.jpg"/>
+                </div>		
+                <div class="boxDeco">
+                <h3>인턴쉽</h3>
+                <ul>
+                    <div class="boxDeco">
+                    <li>2013.7~8 하계 인턴쉽 참여(퓨처스게임)</li>
+                    </div>
+                </ul>		
+                </div>
+                <div class="boxDeco">
+                <h3>봉사</h3>
+                <ul>
+                    <div class="boxDeco">
+                    <li>2011.7  농어촌 봉사활동</li>
+                    </div>
+                    <div class="boxDeco">
+                    <li>2012.8  취약계층 IT 방문교육서비스 참여</li>
+                    </div>
+                </ul>
+                </div>
+            </section>
+            <aside>
+                <div class="boxDeco" style="margin-top: 30px;margin-bottom: 30px;">
+                <h3>참조링크</h3>
+                <a href="http://jjongsangg.github.io">
+                    <img class="portal" src="git.png" alt="깃허브 이동"/>
+                </a>
+                <a href="http://www.instagram.com">
+                    <img class="portal" src="insta.svg" alt="인스타그램 이동"/>
+                </a>
+                <a href="http://www.velog.net">
+                    <img class="portal" src="velog.png" alt="벨로그 이동"/>
+                </a>
+                </div>
+            </aside>
+		</div>
+		<div data-role="footer" style="border: none;padding: 0;margin: 0;background:none;">
+			<iframe style="border:none;position: absolute;left: 0px;bottom: 0px;" width="100%" height="20px" src="./footer.html"></iframe>
+		</div>
+	</div>
+	<div data-role="page" id="page5">
+		<div data-role="header">
+			<h1>두번째 페이지</h1>
+		</div>
+		<div data-role="content">
+ 			<p>페이지 전환 애니메이션 효과</p><br/>
+			<a href="#page1" data-direction="reverse">페이지1</a><br/>
+			<a href="#page3">페이지3 기본 전환효과 적용 </a><br/>
+			<a href="#page3" data-transition="slide">페이지3 slide 적용 </a><br/>
+			<a href="#page3" data-transition="slideup">페이지3 slideup 적용 </a><br/>
+			<a href="#page3" data-transition="slidedown">페이지3 slidedown 적용 </a><br/>
+			<a href="#page3" data-transition="flip">페이지3 flip 적용 </a><br/>
+			<a href="#page3" data-transition="fade">페이지3 fade 적용 </a><br/>
+			<a href="#page3" data-transition="pop">페이지3 pop 적용 </a><br/>
+			<a href="#page3" data-transition="none">페이지3 none 적용</a><br/>
+		</div>
+		<div data-role="footer">
+			<h4>내부링크방식</h4>
+		</div>
+	</div>
+	<div data-role="page" id="page6" data-title=”세번째페이지”>
+		<div data-role="header">
+			<h1></h1>
+		</div>
+		<div data-role="content">
+			<a href="#page1">페이지1</a>
+			<a href="#somepage" data-rel="back">페이지2</a>
+		</div>
+		<div data-role="footer">
+			<h4>내부링크방식</h4>
+		</div>
+	</div>
+</body>
+</html>
+
+
