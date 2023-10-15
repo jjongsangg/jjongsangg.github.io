@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- LocalCss -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>청년시장</title>
+</head>
+<body width="100%" height="100%" style="padding: 0px;margin: 0px;background-color: #EFF3F9;">
+        <div class="headerPanel"></div>
+        <header>            
+            <div style="padding-left: 15%;"></div>
+            <img width="70px" height="70px" src="./assets/imgs/WYM.png" style="border-radius: 50%;cursor: pointer;" onclick="location.href='./index.html'">
+            <div class="headerMenue">
+                <div class="headerMenueItem">
+                    <a href="" class="Active">기업소개</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="intro.html">청년시장<br>소개</a>
+                        <a href="greetings.html" class="Active">대표<br>인사말</a>
+                        <a href="">연혁</a>
+                        <a href="">오시는 길</a>
+                    </div>
+                </div>
+                <div class="headerMenueItem">
+                    <a href="">홍보센터</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">청년시장<br>SNS</a>
+                        <a href="">청년시장<br>관련기사</a>
+                        <a href="">청년시장<br>레시피</a>
+                        <a href="">이벤트</a>
+                    </div>
+                </div>
+                <div class="headerMenueItem">
+                    <a href="">취급매장</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">오프라인<br>매장</a>
+                        <a href="">온라인<br>매장</a>
+                    </div>
+                </div>
+                <div class="headerMenueItem">
+                    <a href="">제품소개</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">전체제품</a>
+                        <a href="">제품군별</a>
+                    </div>
+                </div>        
+                <div class="headerMenueItem">
+                    <a href="">고객센터</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">FAQ</a>
+                        <a href="">Q&A</a>
+                        <a href="">건의하기</a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-right: 15%;"></div>
+        </header>
+        <section>
+            <div class="sectionHeaderContainer">
+                <div class="sectionHeaderText">대표 인사말</div>
+                <img src="./assets/imgs/imgFirm.jpg" class="sectionHeaderImage">
+            </div>
+            <nav>
+                <div class="MainMenu">
+                    기업소개
+                </div>    
+                </div>
+                <div class="SubMenu">
+                    대표 인사말 ▼
+                    <div class="PopupMenu">
+                        <a href="intro.html">청년시장소개</a>
+                    </div>
+                    <div class="PopupMenu">
+                        <a href="greetings.html">대표 인사말</a>
+                    </div>
+                    <div class="PopupMenu">
+                        <a href="">연혁</a>
+                    </div>
+                    <div class="PopupMenu">
+                        <a href="">오시는 길</a>
+                    </div>
+                </div>                
+            </nav>
+            <div class="sectionContents">
+                <div class="sectionContent">
+                    <img src="./assets/imgs/최지호.jpg" style="border-radius: 50%;">
+                    <div class="sectionContentText">
+                        <span class="title">안녕하십니까, <br>'청년시장'을 함께 이끌어가는 청년 최지호입니다.</span><br>
+                        우리 회사는 맛과 품질을 중요시하며, 대만 소시지의 맛과 향을 유지하기 위해 최선을 다하고 있습니다.<br>
+                        저희는 항상 고객님들의 의견을 경청하고, 요구사항을 충족시키기 위해 노력하고 있습니다. <br>
+                        우리의 목표는 고객님들이 맛있는 음식을 즐기며 행복한 순간을 보낼 수 있도록 도움을 드리는 것입니다. <br>
+                        함께 더 나은 미래를 만들어가기 위해 노력할 것을 약속 드립니다. 감사합니다!<br>
+                    </div>                    
+                </div>
+                <div class="sectionContent">
+                    <img src="./assets/imgs/하승범.jpg" alt="" style="border-radius: 50%;float: right;">
+                    <div class="sectionContentText">
+                        <span class="title">안녕하십니까, <br>'청년시장'을 함께 이끌어가는 청년 하승범입니다.</span><br>
+                        우리 회사는 맛과 품질을 중요시하며, 대만 소시지의 맛과 향을 유지하기 위해 최선을 다하고 있습니다.<br>
+                        저희는 항상 고객님들의 의견을 경청하고, 요구사항을 충족시키기 위해 노력하고 있습니다. <br>
+                        우리의 목표는 고객님들이 맛있는 음식을 즐기며 행복한 순간을 보낼 수 있도록 도움을 드리는 것입니다. <br>
+                        함께 더 나은 미래를 만들어가기 위해 노력할 것을 약속 드립니다. 감사합니다!<br>
+                    </div>   
+                </div>
+            </div>
+        </section>
+        <footer>© 2023 Youth_Market, All rights reserved.</footer>
+</body>
+<script>
+    const contents = document.querySelectorAll('.sectionContent')
+    contents[0].classList.add('fadeIn')
+    for(i = 1; i <contents.length; i++){
+        // const tmpTop = contents[i].getBoundingClientRect().top + contents[i].getBoundingClientRect().height
+        // const tmpY = window.innerHeight + window.scrollY - 50
+        // console.log(tmpTop, tmpY)
+        // if(tmpTop >= tmpY){        
+            contents[i].style.opacity = 0;
+        // }
+    }
+    document.addEventListener('wheel',(e) => {
+        for(i = 1; i <contents.length; i++){
+            const tmpTop = contents[i].getBoundingClientRect().top + contents[i].getBoundingClientRect().height
+            const tmpY = window.innerHeight + window.scrollY - 50
+            console.log(tmpTop, tmpY)
+            if(tmpTop < tmpY){
+                if(!contents[i].classList.contains('fadeIn'))
+                    contents[i].classList.add('fadeIn')
+            }
+            else{                
+                contents[i].classList.remove('fadeIn')
+            }
+        }        
+    })
+</script>
+</html>
