@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- LocalCss -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>청년시장</title>
+</head>
+<body width="100%" height="100%" style="padding: 0px;margin: 0px;background-color: #EFF3F9;">
+        <div class="headerPanel"></div>
+        <header>            
+            <div style="padding-left: 15%;"></div>
+            <img width="70px" height="70px" src="../assets/imgs/WYM.png" style="border-radius: 50%;cursor: pointer;" onclick="location.href='./index.html'">
+            <div class="headerMenue">
+                <div class="headerMenueItem">
+                    <a href="" class="Active">기업소개</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="intro.html">청년시장<br>소개</a>
+                        <a href="greetings.html">대표<br>인사말</a>
+                        <a href="history.html">연혁</a>
+                        <a href="waytocomes.html" class="Active">오시는 길</a>
+                    </div>
+                </div>
+                <div class="headerMenueItem">
+                    <a href="">홍보센터</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">청년시장<br>SNS</a>
+                        <a href="">청년시장<br>관련기사</a>
+                        <a href="">청년시장<br>레시피</a>
+                        <a href="">이벤트</a>
+                    </div>
+                </div>
+                <div class="headerMenueItem">
+                    <a href="">취급매장</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">오프라인<br>매장</a>
+                        <a href="">온라인<br>매장</a>
+                    </div>
+                </div>
+                <div class="headerMenueItem">
+                    <a href="">제품소개</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">전체제품</a>
+                        <a href="">제품군별</a>
+                    </div>
+                </div>        
+                <div class="headerMenueItem">
+                    <a href="">고객센터</a>
+                    <div class="headerMenueUnderLine"></div>
+                    <div class="headerSubMenue">
+                        <a href="">FAQ</a>
+                        <a href="">Q&A</a>
+                        <a href="">건의하기</a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-right: 15%;"></div>
+        </header>
+        <section>
+            <div class="sectionHeaderContainer">
+                <div class="sectionHeaderText">오시는 길</div>
+                <img src="../assets/imgs/imgMap.jpg" class="sectionHeaderImage">
+            </div>
+            <nav>
+                <div class="MainMenu">
+                    기업소개
+                </div>    
+                </div>
+                <div class="SubMenu">
+                    오시는 길 ▼
+                    <div class="PopupMenu">
+                        <a href="intro.html">청년시장소개</a>
+                    </div>
+                    <div class="PopupMenu">
+                        <a href="greetings.html">대표 인사말</a>
+                    </div>
+                    <div class="PopupMenu">
+                        <a href="history.html">연혁</a>
+                    </div>
+                    <div class="PopupMenu">
+                        <a href="waytocomes.html">오시는 길</a>
+                    </div>
+                </div>                
+            </nav>
+            <div class="sectionContents">
+                <div class="sectionContent">
+                    <img src="../assets/imgs/roadtocome.png" style="width: 100%;">
+                </div>
+            </div>
+        </section>
+        <footer>© 2023 Youth_Market, All rights reserved.</footer>
+</body>
+<script>
+    const contents = document.querySelectorAll('.sectionContent')
+    contents[0].classList.add('fadeIn')
+    for(i = 1; i <contents.length; i++){
+        // const tmpTop = contents[i].getBoundingClientRect().top + contents[i].getBoundingClientRect().height
+        // const tmpY = window.innerHeight + window.scrollY - 50
+        // console.log(tmpTop, tmpY)
+        // if(tmpTop >= tmpY){        
+            contents[i].style.opacity = 0;
+        // }
+    }
+    document.addEventListener('wheel',(e) => {
+        for(i = 1; i <contents.length; i++){
+            const tmpTop = contents[i].getBoundingClientRect().top + contents[i].getBoundingClientRect().height
+            const tmpY = window.innerHeight + window.scrollY - 50
+            console.log(tmpTop, tmpY)
+            if(tmpTop < tmpY){
+                if(!contents[i].classList.contains('fadeIn'))
+                    contents[i].classList.add('fadeIn')
+            }
+            else{                
+                contents[i].classList.remove('fadeIn')
+            }
+        }        
+    })
+</script>
+</html>
