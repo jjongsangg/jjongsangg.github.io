@@ -714,12 +714,38 @@ tbody td {
 <script>
 	const jsGal = document.querySelector('#jsGal')
 	const jqGal = $('#jqGal')
+	let imgTurn = 1;
 	for(i = 1; i < 9; i++){
-		let tmpImg = document.createElement('img')
+		let tmpImgBox = document.createElement('div')		
+		tmpImgBox.style.width = '45%'
+		tmpImgBox.style.display = 'inline-block'
+		let tmpImg = document.createElement('img')		
 		tmpImg.src = `./assets/imgs/galleryimg/img${i}.jpg`
-		jsGal.appendChild(tmpImg)
-		jqGal.append(`<img src="./assets/imgs/galleryimg/img${i}.jpg">`)
+		tmpImg.addEventListener('mouseover', ()=>{
+			console.log(tmpImg)
+			tmpImg.style.width = '100%'
+		})
+		tmpImg.addEventListener('mouseout', ()=>{
+			console.log(tmpImg)
+			tmpImg.style.width = '45%'
+		})
+		tmpImgBox.appendChild(tmpImg)
+		jsGal.appendChild(tmpImgBox)
+		jqGal.append(`<img id='jqGal${i}'src="./assets/imgs/galleryimg/img${i}.jpg"' style='display:none'>`)
 	}
+	setInterval(()=>{
+		let prevTurn = imgTurn - 1;
+		if(imgTurn == 1){
+			prevTurn = 8
+		}
+		$(`#jqGal${imgTurn}`).css('display','inline-block')
+		$(`#jqGal${prevTurn}`).css('display','none')
+		imgTurn ++
+		if(imgTurn > 8){
+			imgTurn = 1
+		}
+		
+	},	1000)
 	console.log($('body'))
 </script>
 </html>
