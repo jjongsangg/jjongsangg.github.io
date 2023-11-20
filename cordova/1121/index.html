@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="assets/css/jquery.mobile-1.4.5.min.css"/>
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/js/jquery.mobile-1.4.5.min.js"></script>
+<style>
+	/* #03C75A 네이버 그린 */
+	.ui-input-text.ui-custom, input {
+   		border: none;
+   		box-shadow: none;
+		background-color: white;
+	}
+	.inputSearch {
+		width: 50%;
+		display: inline-block;
+		background-color: white;
+	}
+	.header	{
+		z-index: 1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: white;
+		font-size: 20px;
+		color: black;
+		font-weight: 500;
+		border-bottom: 1px solid #03C75A;;
+	}
+	b {
+		margin-left: 10px;
+		font-size: 24px;
+		color: #03C75A;
+	}
+	div > b {
+		font-size: 16px;
+	}
+</style>
+</head>
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div class="header" data-role="header" data-theme="b">
+				<b>N</b> 쇼핑 
+			<div class="inputSearch">
+				<input value="세이코오토매틱" id="inputSearch" type="text" data-wrapper-class="ui-custom" style="background-color: white;color: black;font-weight:500;font-size: 16px;">
+			</div>
+			<div style="float: right;cursor: pointer;">
+			<!-- <svg width="32" height="32" fill="none" viewBox="0 -10 32 32" class="_combineHeader_icon_2_hfw"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.25 11.75V7.5A4.25 4.25 0 0012 3.25v0A4.25 4.25 0 007.75 7.5v4.25"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.98 8.75H4.02a1 1 0 00-.973 1.234l2.41 10c.107.45.51.766.971.766h11.144a1 1 0 00.972-.766l2.409-10a1 1 0 00-.973-1.234z"></path></svg> -->
+			<svg width="32" height="32" fill="none" viewBox="0 -10 32 32" class="_combineHeader_icon_2_hfw"><path d="M3.333 5.5h17.333M3.333 12h17.333M3.333 18.5h17.333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+			</div>
+		</div>
+		<div data-role="navbar" data-grid="d" style="position: absolute;top: 56px;left: 0;right:0;background-color: white;border-bottom: 1px solid #e2e2e2;">
+			<ul id="categories" style="display: flex;justify-content: space-evenly;padding: 5px;">
+				<li><a href="javascript: " style="cursor:default; background-color: transparent; border: none; color: black;">추천 검색</a></li>
+				<li><a href="javascript: search('여성시계')"  style="background-color: transparent; border: none; color: #577DF7;">여성시계</a></li>
+				<li><a href="javascript: search('카시오시계')" style="background-color: transparent; border: none; color: #577DF7;">카시오시계</a></li>
+				<li><a href="javascript: search('클래식시계')" style="background-color: transparent; border: none; color: #577DF7;">클래식시계</a></li>
+				<li><a href="javascript: search('세이코시계')" style="background-color: transparent; border: none; color: #577DF7;">세이코시계</a></li>
+			</ul>
+		</div>
+		<div data-role="content" class="mainContent" style="position: absolute;top: 100px;left: 0;right: 0;padding: 0;">
+			<div style="background-color: #fdfdfd;border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;padding: 0;height: 45px;">
+				<div onclick="location.href='?sort=sim&search='+$('#inputSearch').val()" style="margin: 8px; padding: 5px; margin-right: 0; padding-left:10px;display: inline-block; border-radius: 15px;border: 1px solid #e2e2e2;cursor: pointer;font-size: 12px;">정확도</div>
+				<div onclick="location.href='?sort=date&search='+$('#inputSearch').val()" style="margin: 8px; padding: 5px; margin-right: 0; padding-left:10px;display: inline-block; border-radius: 15px;border: 1px solid #e2e2e2;cursor: pointer;font-size: 12px;">날짜순</div>
+				<div onclick="location.href='?sort=asc&search='+$('#inputSearch').val()" style="margin: 8px; padding: 5px; margin-right: 0; padding-left:10px;display: inline-block; border-radius: 15px;border: 1px solid #e2e2e2;cursor: pointer;font-size: 12px;">가격순 ▽</div>
+				<div onclick="location.href='?sort=dsc&search='+$('#inputSearch').val()" style="margin: 8px; padding: 5px; margin-right: 0; padding-left:10px;display: inline-block; border-radius: 15px;border: 1px solid #e2e2e2;cursor: pointer;font-size: 12px;">가격순 △</div>
+			</div>
+			<div id="itemList">
+			<div style="background-color: white;border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;padding: 0;height: 130px;margin-bottom: 5px;">
+				<img src="https://shopping-phinf.pstatic.net/main_1137779/11377797667.8.jpg" alt="" style="float:left;width: 100px; margin: 15px;">
+				<div style="margin-top: 5px;">이름</div>
+				<div style="display: inline-block;margin-top: 5px;">가격</div><div style="display: inline-block;margin-top: 5px;">배송비</div>
+				<div style="margin-top: 5px;">오늘출발</div>
+				<div style="margin-top: 5px;">몰이름</div>
+			</div>
+			<div style="background-color: white;border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;padding: 0;height: 130px;margin-bottom: 5px;">
+				<img src="https://shopping-phinf.pstatic.net/main_1137779/11377797667.8.jpg" alt="" style="float:left;width: 100px; margin: 15px;">
+				<div style="margin-top: 5px;">이름</div>
+				<div style="display: inline-block;margin-top: 5px;">가격</div><div style="display: inline-block;margin-top: 5px;">배송비</div>
+				<div style="margin-top: 5px;">오늘출발</div>
+				<div style="margin-top: 5px;">몰이름</div>
+			</div>
+			<div style="background-color: white;border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;padding: 0;height: 130px;margin-bottom: 5px;">
+				<img src="https://shopping-phinf.pstatic.net/main_1137779/11377797667.8.jpg" alt="" style="float:left;width: 100px; margin: 15px;">
+				<div style="margin-top: 5px;">이름</div>
+				<div style="display: inline-block;margin-top: 5px;">가격</div><div style="display: inline-block;margin-top: 5px;">배송비</div>
+				<div style="margin-top: 5px;">오늘출발</div>
+				<div style="margin-top: 5px;font-size:12px;color: rgb(165, 165, 165);">몰이름</div>
+			</div>
+		</div>
+		<div data-role="navbar" data-grid="d" style="background-color: white;border-bottom: 1px solid #e2e2e2;">
+			<ul id="pages" style="display: flex;justify-content: space-evenly;padding: 5px;">
+				<li><a href="javascript: " style="cursor:default; background-color: transparent; border: none; color: black;">1</a></li>
+				<li><a href="javascript: "  style="background-color: transparent; border: none; color: #577DF7;">2</a></li>
+				<li><a href="javascript: " style="background-color: transparent; border: none; color: #577DF7;">3</a></li>
+				<li><a href="javascript: " style="background-color: transparent; border: none; color: #577DF7;">4</a></li>
+				<li><a href="javascript: " style="background-color: transparent; border: none; color: #577DF7;">5</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="./assets/js/client-id.js"></script>
+	<script>
+		const categories = []
+		const search = (query) => {
+			$('#inputSearch').val(decodeURI(query))
+			var apiUrl = './search.php?Search=' + query;
+			// Add your Client ID and Client Secret here
+			if(getParam('sort'))
+				apiUrl += '&sort=' + getParam('sort')
+			if(getParam('page'))
+				apiUrl += '&page=' + getParam('page')
+			console.log(apiUrl)
+			$.ajax({
+				type: 'GET',
+				url: apiUrl,
+				success: function(data) {
+					data = JSON.parse(data.split("s_code:200")[1])
+					const total = data.total
+					const items = data.items
+					categories.length = 0
+					$("#itemList").empty()
+					items.forEach(element => {
+						const tmpStr = element.title.replaceAll("<b>","").replaceAll("</b>","").slice(0,15)
+						$("#itemList").append(`
+						<div style="background-color: white;border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;padding: 0;margin-bottom: 5px;height:130px" onclick='location.href="${element.link}"'>
+						<img src="${element.image}" alt="" style="float:left;width: 100px; height:100px; margin: 15px;">
+						<div style="margin-top: 5px; overflow:hidden">${tmpStr.length >= 14 ? tmpStr + '...' : tmpStr}</div>
+						<div style="display: inline-block;margin-top: 5px;">최저 ${element.lprice}원</div>
+						<div style="display: inline-block;margin-top: 5px;margin-left:10px;font-size:12px;color: rgb(165, 165, 165);"><svg width="15" height="11" fill="none" xmlns="http://www.w3.org/2000/svg" class="product_svg_delivery__xzKER"><mask id="IconProductDelivery_svg__a" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="11" style="mask-type: alpha;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0H.5v11h14V0z" fill="#fff"></path></mask><g mask="url(#IconProductDelivery_svg__a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.204 8.779c0 .02.02.04.04.04h.685c.163-.82.85-1.436 1.676-1.437C4.43 7.383 5.117 8 5.28 8.82h4.44c.162-.82.85-1.437 1.675-1.437.825 0 1.513.617 1.675 1.437h.686c.019 0 .039-.021.039-.041v-2.91a1.97 1.97 0 0 0-.133-.627l-1.149-2.548c-.006-.053-.194-.178-.24-.162h-3.28c-.02 0-.04.022-.04.043v4.078h-7.75V8.78zm2.4 1.477c.557 0 1.007-.476 1.009-1.064-.002-.589-.452-1.064-1.008-1.065-.558 0-1.008.476-1.01 1.065.002.588.452 1.063 1.01 1.064zm7.792 0c.557-.001 1.008-.476 1.008-1.064 0-.589-.45-1.064-1.008-1.066-.557.002-1.007.477-1.008 1.066 0 .588.451 1.063 1.008 1.064zM.5 5.911V.785C.502.351.832.001 1.243 0h5.73c.41.002.742.35.743.785v.843h-.704V.785c0-.02-.02-.042-.039-.042h-5.73c-.019 0-.039.021-.039.042v5.126h7.047V2.575c.001-.435.332-.785.743-.786h3.28c.38.017.697.228.875.586l1.149 2.548c.121.282.198.637.202.946v2.91c-.002.434-.331.783-.743.783h-.686c-.162.821-.85 1.437-1.675 1.437-.825 0-1.513-.616-1.675-1.437H5.28C5.117 10.383 4.43 11 3.605 11c-.826 0-1.514-.617-1.676-1.438h-.685c-.412 0-.742-.35-.744-.783V5.91z" fill="#999"></path></g></svg>배송비 : 'API미지원'</div>
+						<div style="margin-top: 5px;font-size:12px;color: rgb(165, 165, 165);">"${element.mallName}"</div>
+						</div>
+						`);
+						if(categories.length < 5) {
+							if(!categories.includes(element.category1)) categories.push(element.category1)
+							if(!categories.includes(element.category2)) categories.push(element.category2)
+							if(!categories.includes(element.category3)) categories.push(element.category3)
+							if(!categories.includes(element.category4)) categories.push(element.category4)
+						}
+					});
+					console.log(categories)
+					$("#categories").empty().append(
+						`<li class=""><a href="javascript: " style="cursor:default; background-color: transparent; border: none; color: black;text-decoration:none">추천 검색</a></li>`
+					)
+					categories.forEach(element =>{
+						$("#categories").append(
+						`<li><a href="javascript: search('${element}')"  style="background-color: transparent; border: none; color: #577DF7;text-decoration:none">${element}</a></li>`
+						)
+					})
+
+					let currPage = 1					
+					if(getParam('page'))
+						currPage = parseInt(getParam('page'))
+										
+					let startPage = currPage - 2					
+					if( startPage < 1)
+						startPage = 1
+					let endPage = startPage + 5
+					if(total < endPage * 10){
+						endPage = endPage - 1
+						for(i = 0; i < 4; i++)
+						if(total < endPage * 10){
+							endPage = endPage - 1
+						}
+					}
+					console.log(total)
+					$("#pages").empty()
+					for(i = startPage; i < endPage; i++){
+						const newURL = `?sort=${getParam('sort')}&search=${query}&page=${i}`
+						console.log(i, currPage)
+						if( i != currPage){
+							$("#pages").append(
+								`<li><a href="javascript: location.href='${newURL}'"  style="background-color: transparent; border: none; color: #577DF7;">${i}</a></li>`
+							)
+						}
+						else{
+							$("#pages").append(
+							`<li><a href="javascript: " style="cursor:default; background-color: transparent; border: none; color: black;">${currPage}</a></li>`
+							)
+						}
+					}
+					$('#results').html(JSON.stringify(data)); // Displaying the results	
+					return false
+				},
+				error: function(xhr, status, error) {
+					console.log('Error:', error);
+				}
+			});
+		}
+		$('#inputSearch').on("keydown",(e)=>{
+			if(e.keyCode == 13){
+				if($('#inputSearch').val() != "") search($('#inputSearch').val())
+				else alert("검색어를 입력하세요.")
+			}
+		})
+		function getParam(sname) {
+			var params = location.search.substr(location.search.indexOf("?") + 1);
+			var sval = "";
+			params = params.split("&");
+			for (var i = 0; i < params.length; i++) {
+				temp = params[i].split("=");
+				if ([temp[0]] == sname) { sval = temp[1]; }
+			}
+			return sval;
+		}
+		if(getParam("search")){
+			const query =decodeURI( getParam("search"))
+			search(query)
+			$('#inputSearch').val(query)
+		}
+	</script>
+</div>	
+</body>
+</html>
