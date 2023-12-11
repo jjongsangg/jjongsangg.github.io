@@ -5,11 +5,11 @@
 
 ## 2. 프리 템플릿 사이트 따라해보기
 
-[preview_레퍼런스 템플릿]
+[preview_레퍼런스 템플릿]<br>
 ![2021_04_user_count](./Figma1.png)<br>
 
-[preview_작업 결과]
-![2021_04_user_count](./Figma1.png)
+[preview_작업 결과]<br>
+![2021_04_user_count](./Figma1.png)<br>
 
 ## 3. 프로그래머스 사이트 따라해보기
 [preview]
