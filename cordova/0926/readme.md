@@ -1,16 +1,20 @@
-## JQuery-mobile 반응형 웹 익히기
-### 1. 소개
+## JQuery-mobile 반응형 웹 학교소개사이트 만들어보기
+### 1. 홈
 [preview]
-![기능 익히기](./JQueryPortfolioIntro.png)
+![기능 익히기](./JQueryCollage1.png)
 
-### 2. 인적 사항
+### 2. 학과안내
 [preview]
-![인적 사항](./JQueryPortfolioInfo.png)
+![학과안내](./JQueryCollage2.png)
 
-### 3. 학술 정보
-[preview]
-![학술 정보](./JQueryPortfolioStudy.png)
+### 3. 학사안내
+[학사안]
+![학술 정보](./JQueryCollage3.png)
 
-### 1. 경력 정보
+### 4. 커뮤니티
 [preview]
-![경력 정보](./JQueryPortfolioCareer.png)
+![커뮤니티](./JQueryCollage4.png)
+
+### 5. 취업정보
+[preview]
+![취업정보](./JQueryCollage5.png)
