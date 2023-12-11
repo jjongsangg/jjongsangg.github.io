@@ -4,8 +4,10 @@
 ![2021_04_user_count](./Figma0.png)
 
 ## 2. 프리 템플릿 사이트 따라해보기
+
 [preview_레퍼런스 템플릿]
 ![2021_04_user_count](./Figma1.png)
+
 [preview_작업 결과]
 ![2021_04_user_count](./Figma1.png)
 
