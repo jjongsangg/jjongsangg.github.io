@@ -766,7 +766,7 @@
   </main>
 
   <script>
-    (function () {
+    document.addEventListener("DOMContentLoaded", function () {
       const start = new Date(2024, 8, 26); // 2024-09-26
       const today = new Date();
 
@@ -835,7 +835,7 @@
 
       const initialTab = location.hash.replace("#", "");
       activateTab(tabs.some(function (tab) { return tab.dataset.tab === initialTab; }) ? initialTab : "work", false);
-    })();
+    });
   </script>
 
 
