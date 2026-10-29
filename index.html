@@ -437,15 +437,15 @@
       </div>
 
       <p class="summary">
-        어릴 때 게임을 만들며 개발자를 꿈꾸기 시작했고, 군 복무 중 전산병으로 근무하며 VBA를 활용해 반복적인 행정 업무를 자동화했습니다.<br/>
+        어릴 때 게임을 만들며 개발자를 꿈꾸기 시작했고, 군 복무 중 전산병으로 근무하며 VBA를 활용해 반복적인 행정 업무를 자동화했습니다.<br>
         현재는 사내 ERP 개발 및 운영을 담당하며 생산·자재·재고·출하 업무의 전산화, PDA·바코드 기반 현장 시스템 개선,
-        외부 생산관리 시스템과 ERP 간 데이터 연계 및 정합성 확보 업무를 수행하고 있습니다.<br/>
-        MSSQL Replication 운영과 장애 복구, 신규 서버 구축, Microsoft 365·Active Directory 등 사내 IT 인프라 운영도 함께 담당하고 있습니다.<br/>
+        외부 생산관리 시스템과 ERP 간 데이터 연계 및 정합성 확보 업무를 수행하고 있습니다.<br>
+        MSSQL Replication 운영과 장애 복구, 신규 서버 구축, Microsoft 365·Active Directory 등 사내 IT 인프라 운영도 함께 담당하고 있습니다.<br>
         VBA, C#, Java, Kotlin, Python, JavaScript 등 다양한 기술을 접하며 새로운 기술이 필요한 상황에서도 빠르게 학습해 실무에 적용해 왔습니다.
       </p>
 
       <div class="quick">
-        <span class="chip blue">총 경력 <span id="career-duration">계산 중</span></span>
+        <span class="chip blue">총 경력 <span id="career-duration">2년 1개월</span></span>
         <span class="chip">ERP 개발/운영</span>
         <span class="chip">C# · MSSQL</span>
         <span class="chip">PDA · 바코드</span>
@@ -457,14 +457,31 @@
     <div class="content">
       <div class="main">
         <nav class="tab-nav" role="tablist" aria-label="이력서 본문">
-          <button class="tab-button active" type="button" role="tab" id="tab-work" aria-controls="panel-work" aria-selected="true" data-tab="work">주요 업무</button>
-          <button class="tab-button" type="button" role="tab" id="tab-career" aria-controls="panel-career" aria-selected="false" data-tab="career">경력 <span class="tab-count" id="career-months">계산 중</span></button>
-          <button class="tab-button" type="button" role="tab" id="tab-portfolio" aria-controls="panel-portfolio" aria-selected="false" data-tab="portfolio">포트폴리오 <span class="tab-count" id="portfolio-count">0개</span></button>
+          <button class="tab-button active" type="button" role="tab" id="tab-work" aria-controls="panel-work" aria-selected="true" data-tab="work" tabindex="0">주요 업무</button>
+          <button class="tab-button" type="button" role="tab" id="tab-career" aria-controls="panel-career" aria-selected="false" data-tab="career" tabindex="-1">경력 <span class="tab-count" id="career-months">총 25개월</span></button>
+          <button class="tab-button" type="button" role="tab" id="tab-portfolio" aria-controls="panel-portfolio" aria-selected="false" data-tab="portfolio" tabindex="-1">포트폴리오 <span class="tab-count" id="portfolio-count">5개</span></button>
         </nav>
 
         <section class="tab-panel active" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
           <h2 class="section-title">주요 업무</h2>
           <div class="timeline">
+            <article class="item">
+              <div class="item-head">
+                <h3>군 정보체계 운영 및 행정업무 자동화</h3>
+                <span class="period">2021.02 ~ 2022.11</span>
+              </div>
+              <ul>
+                <li>부대 인트라넷 서버 및 군 정보체계 운영 지원</li>
+                <li>PC·프린터·노트북 등 전산자산 및 IP 자원 관리</li>
+                <li>부대 내 네트워크·통신회선 관리 및 전산장비 장애 대응</li>
+                <li>Excel VBA를 활용한 근무 편성의 주관적 배정 문제 개선 및 근무표 작성 자동화</li>
+                <li>Excel VBA 기반 소모품 불출 관련 행정문서 작성 자동화</li>
+              </ul>
+              <div class="tech">
+                <span>Excel VBA</span><span>정보체계 운영</span><span>전산자산</span><span>네트워크</span>
+              </div>
+            </article>
+
             <article class="item">
               <div class="item-head">
                 <h3>사내 ERP 업무 전산화 및 PDA 현장 시스템 개선</h3>
@@ -555,7 +572,7 @@
           </div>
         </section>
 
-        <section class="tab-panel" id="panel-career" role="tabpanel" aria-labelledby="tab-career" hidden>
+        <section class="tab-panel" id="panel-career" role="tabpanel" aria-labelledby="tab-career" hidden="">
           <h2 class="section-title">경력</h2>
 
           <div class="career-card">
@@ -575,9 +592,15 @@
             <div class="meta">2024.09 ~ 2025.01 · 5개월 · 부산 · 백엔드/서버개발</div>
             <p>사내 ERP 신규 기능 개발 및 유지보수, Microsoft 365·AD·CCTV 및 전산 인프라 관리 · 퇴사사유: 인사이동</p>
           </div>
+
+          <div class="career-card">
+            <strong>대한민국 공군 · 정보체계관리병</strong>
+            <div class="meta">2021.02 ~ 2022.11 · 1년 10개월 · 병장 만기전역</div>
+            <p>군 정보체계 및 IT 인프라 운영·관리</p>
+          </div>
         </section>
 
-        <section class="tab-panel" id="panel-portfolio" role="tabpanel" aria-labelledby="tab-portfolio" hidden>
+        <section class="tab-panel" id="panel-portfolio" role="tabpanel" aria-labelledby="tab-portfolio" hidden="">
           <h2 class="section-title">포트폴리오</h2>
           <div class="portfolio-cards">
             <article class="portfolio-card">
@@ -672,10 +695,10 @@
         <div class="side-block">
           <h2>핵심 역량</h2>
           <div class="plain">
-            ERP 업무 프로세스 분석 및 기능 개발<br/>
-            생산·자재·재고·출하 도메인 경험<br/>
-            시스템 간 데이터 연계 및 정합성 관리<br/>
-            MSSQL / Replication 운영 및 장애 대응<br/>
+            ERP 업무 프로세스 분석 및 기능 개발<br>
+            생산·자재·재고·출하 도메인 경험<br>
+            시스템 간 데이터 연계 및 정합성 관리<br>
+            MSSQL / Replication 운영 및 장애 대응<br>
             신규 기술의 빠른 학습과 실무 적용
           </div>
         </div>
@@ -692,9 +715,9 @@
         <div class="side-block">
           <h2>학력</h2>
           <div class="plain">
-            <strong>부산경상대학</strong><br/>
-            컴퓨터정보융합과<br/>
-            2020.02 ~ 2025.02 · 졸업예정<br/>
+            <strong>부산경상대학</strong><br>
+            컴퓨터정보융합과<br>
+            2020.02 ~ 2025.02 · 졸업예정<br>
             학점 4.31 / 4.5
           </div>
         </div>
@@ -702,10 +725,10 @@
         <div class="side-block">
           <h2>자격</h2>
           <div class="plain">
-            SQL개발자(SQLD) · 2025.04<br/>
-            정보처리산업기사 · 2024.06<br/>
-            정보처리기능사 · 2022.07<br/>
-            전자기기기능사 · 2018.07<br/>
+            SQL개발자(SQLD) · 2025.04<br>
+            정보처리산업기사 · 2024.06<br>
+            정보처리기능사 · 2022.07<br>
+            전자기기기능사 · 2018.07<br>
             전기기능사 · 2018.06
           </div>
         </div>
@@ -713,8 +736,8 @@
         <div class="side-block">
           <h2>경험</h2>
           <div class="plain">
-            경상남도교육청 해외인턴십<br/>
-            호주 워킹홀리데이 1년<br/>
+            경상남도교육청 해외인턴십<br>
+            호주 워킹홀리데이 1년<br>
             2018.10 ~ 2019.09
           </div>
         </div>
@@ -814,6 +837,7 @@
       activateTab(tabs.some(function (tab) { return tab.dataset.tab === initialTab; }) ? initialTab : "work", false);
     })();
   </script>
+
 
 </body>
 </html>
