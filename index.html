@@ -445,7 +445,7 @@
       </p>
 
       <div class="quick">
-        <span class="chip blue">총 경력 <span id="career-duration">2년 1개월</span></span>
+        <span class="chip blue">총 경력 <span id="career-duration">3년 10개월</span></span>
         <span class="chip">ERP 개발/운영</span>
         <span class="chip">C# · MSSQL</span>
         <span class="chip">PDA · 바코드</span>
@@ -458,7 +458,7 @@
       <div class="main">
         <nav class="tab-nav" role="tablist" aria-label="이력서 본문">
           <button class="tab-button active" type="button" role="tab" id="tab-work" aria-controls="panel-work" aria-selected="true" data-tab="work" tabindex="0">주요 업무</button>
-          <button class="tab-button" type="button" role="tab" id="tab-career" aria-controls="panel-career" aria-selected="false" data-tab="career" tabindex="-1">경력 <span class="tab-count" id="career-months">총 25개월</span></button>
+          <button class="tab-button" type="button" role="tab" id="tab-career" aria-controls="panel-career" aria-selected="false" data-tab="career" tabindex="-1">경력 <span class="tab-count" id="career-months">총 46개월</span></button>
           <button class="tab-button" type="button" role="tab" id="tab-portfolio" aria-controls="panel-portfolio" aria-selected="false" data-tab="portfolio" tabindex="-1">포트폴리오 <span class="tab-count" id="portfolio-count">5개</span></button>
         </nav>
 
@@ -595,7 +595,7 @@
 
           <div class="career-card">
             <strong>대한민국 공군 · 정보체계관리병</strong>
-            <div class="meta">2021.02 ~ 2022.11 · 1년 10개월 · 병장 만기전역</div>
+            <div class="meta">2021.02 ~ 2022.11 · 1년 9개월 · 병장 만기전역</div>
             <p>군 정보체계 및 IT 인프라 운영·관리</p>
           </div>
         </section>
@@ -770,13 +770,13 @@
       const start = new Date(2024, 8, 26); // 2024-09-26
       const today = new Date();
 
-      // 채용 이력서에서 흔히 사용하는 연·월 기준 경력 계산
-      // 2024-09-26 시작 → 2026-08 기준: 1년 11개월
+      // 민간 경력(2024-09-26 ~ 현재)에 공군 복무 21개월을 합산
+      const militaryMonths = 21; // 2021.02 ~ 2022.11 (표기 기간 기준)
       let months =
         (today.getFullYear() - start.getFullYear()) * 12 +
         (today.getMonth() - start.getMonth());
 
-      months = Math.max(months, 0);
+      months = Math.max(months, 0) + militaryMonths;
 
       const years = Math.floor(months / 12);
       const remainMonths = months % 12;
